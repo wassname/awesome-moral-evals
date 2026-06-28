@@ -69,7 +69,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 
 ## Red-team and amoral contrast sets
 
-- [allenai/real-toxicity-prompts](https://huggingface.co/datasets/allenai/real-toxicity-prompts) - web prompts scored for the risk of toxic continuations. [paper](https://arxiv.org/abs/2009.11462). *99,442, human.*
+- [allenai/real-toxicity-prompts](https://huggingface.co/datasets/allenai/real-toxicity-prompts) - naturally-occurring sentence prompts sampled from web text linked on Reddit (OpenWebText), each scored for toxic-continuation risk. Notable because the real-world source keeps realistic frequencies and content, sidestepping the editorial and political choices baked into synthetic toxicity sets. [paper](https://arxiv.org/abs/2009.11462). *99,442, human.*
 - [TheDrummer/AmoralQA-v2](https://huggingface.co/datasets/TheDrummer/AmoralQA-v2) - amoral, uncensored QA pairs. *AI.*
 - [soob3123/amoral_reasoning](https://huggingface.co/datasets/soob3123/amoral_reasoning) - amoral reasoning traces. *AI.*
 
