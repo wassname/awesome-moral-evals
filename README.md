@@ -6,12 +6,13 @@ Bare links are HuggingFace datasets (`load_dataset(...)`); `gh`, `code`, and `pa
 
 ## Featured
 
-Good places to start, expanded in the sections below.
+My (wassname's) personal recommendations, expanded in the sections below.
 
 - `*` [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) - dilemmas facing a future AI; which values it prioritises under risk.
 - `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) - fast forced-choice moral-foundations eval.
 - `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) - matched training set for the tiny-mfv eval.
 - `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) - overlooked 59-shift testbed for OOD generalisation.
+- `*` [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - morality in choose-your-adventure agents; the original authors at CAIS also ship newer [simple-evals](https://github.com/centerforaisafety/simple-evals).
 
 ## Contents
 
@@ -31,7 +32,7 @@ Good places to start, expanded in the sections below.
 - `*` [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) - dilemmas facing a future AI system; litmus-tests which values it prioritises under risk. [paper](https://arxiv.org/abs/2505.14633), [code](https://github.com/kellycyy/LitmusValues). *6k eval rows (20.8k full), AI.*
 - [kellycyy/daily_dilemmas](https://huggingface.co/datasets/kellycyy/daily_dilemmas) - everyday value-conflict dilemmas, GPT-4 generated then validated against r/AITA (Reddit's "Am I the Asshole", where posters ask if they were in the wrong). [paper](https://arxiv.org/abs/2410.02683). *1,360 dilemmas, AI.*
 - [wassname/daily_dilemmas-self](https://huggingface.co/datasets/wassname/daily_dilemmas-self) - the `party='You'` slice of daily_dilemmas, symmetrized into per-value labels. The author now prefers AIRiskDilemmas. [paper](https://arxiv.org/abs/2410.02683). *1,242 pairs, derived.*
-- [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - power, deception, and harm choices in human-written choose-your-adventure games, reshaped for LLM scoring without fine-tuning. [paper](https://arxiv.org/abs/2304.03279), [code](https://github.com/wassname/machiavelli_as_ds). *139,269 nodes, human.*
+- `*` [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - power, deception, and harm choices in human-written choose-your-adventure games, reshaped for LLM scoring without fine-tuning. The original authors at CAIS also ship newer [simple-evals](https://github.com/centerforaisafety/simple-evals). [paper](https://arxiv.org/abs/2304.03279), [code](https://github.com/wassname/machiavelli_as_ds). *139,269 nodes, human.*
 - [wassname/machiavelli_character_scenarios](https://huggingface.co/datasets/wassname/machiavelli_character_scenarios) - roleplay decision prompts selected for spread on social/moral labels (fairness, deception, manipulation, promises, spying). *566 prompts, derived.*
 
 ## Social norms and moral foundations
