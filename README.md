@@ -18,7 +18,7 @@ Every entry here has a public URL. Most are processed into [HuggingFace `dataset
 - [wassname/daily_dilemmas-self](https://huggingface.co/datasets/wassname/daily_dilemmas-self) - subset of `kellycyy/daily_dilemmas` converted into symmetric per-value labels for the decision-maker's own values (`party='You'`).
 - [kellycyy/daily_dilemmas](https://huggingface.co/datasets/kellycyy/daily_dilemmas) - 1360 everyday dilemmas, each pitting two values against each other ([paper](https://arxiv.org/abs/2410.02683), ICLR 2025 spotlight, CC-BY-4.0).
 - [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) - high-stakes dilemmas with the AI itself as protagonist (Chiu et al. 2025), the complement to everyday AITA-style cases.
-- [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - the MACHIAVELLI benchmark reshaped into a flat dataset of trajectory nodes, choices, and harm/power/ethics labels from text-adventure games.
+- [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - the MACHIAVELLI benchmark reshaped into a flat dataset of trajectory nodes, choices, and harm/power/ethics labels from text-adventure games ([code](https://github.com/wassname/machiavelli_as_ds)).
 - [wassname/machiavelli_character_scenarios](https://huggingface.co/datasets/wassname/machiavelli_character_scenarios) - character-scenario slice of MACHIAVELLI.
 
 ## Social norms and moral foundations
