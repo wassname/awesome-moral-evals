@@ -49,7 +49,7 @@ Recommended starting points: [kellycyy/AIRiskDilemmas](https://huggingface.co/da
 |---|---|---|---|---|
 | [wassname/ethics_expression_preferences](https://huggingface.co/datasets/wassname/ethics_expression_preferences) | ~45k pairs | human | [2008.02275](https://arxiv.org/abs/2008.02275) | The ETHICS dataset (commonsense, deontology, justice, utilitarianism) as DPO pairs, expression form. |
 | [wassname/ethics_qna_preferences](https://huggingface.co/datasets/wassname/ethics_qna_preferences) | ~113k pairs | human | [2008.02275](https://arxiv.org/abs/2008.02275) | Same ETHICS coverage (plus virtue) as question-and-answer DPO pairs. |
-| [yixionghao/AEP_OOD_evaluation](https://huggingface.co/datasets/yixionghao/AEP_OOD_evaluation) | n/a | ? | – | Out-of-distribution eval over safety features: honesty, sycophancy, corrigibility, self/situational awareness. |
+| [yixionghao/AEP_OOD_evaluation](https://huggingface.co/datasets/yixionghao/AEP_OOD_evaluation) | raw files | AI | – | OOD eval over safety traits (honesty, sycophancy, corrigibility, awareness, refusal, power-seeking) and Big-Five, with LLM-generated prompts. Non-standard layout (`choice-qa/` and `open-ended/` folders, no plain `load_dataset`); unvetted here. |
 | [lcalvobartolome/fever_dplace_q](https://huggingface.co/datasets/lcalvobartolome/fever_dplace_q) | 185 | mix | – | Merges FEVER and D-PLACE to study entailment, contradiction, and cross-cultural value discrepancy. |
 
 ## Honesty, truthfulness, sycophancy
