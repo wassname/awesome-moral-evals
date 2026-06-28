@@ -77,7 +77,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 
 Models and datasets that deliberately sit off the modern, brand-safe alignment axis, useful as contrasts when measuring values.
 
-- [v2ray/4chan](https://huggingface.co/datasets/v2ray/4chan) - 4chan threads. Not so much "toxic" as edgy and offensive, focused on edge and offensive humour. Valuable precisely because it is almost the opposite of the harmless, brand-friendly training that frontier labs apply. *50,835, human.*
+- [v2ray/4chan](https://huggingface.co/datasets/v2ray/4chan) - 4chan threads. Often misread as "bad" or "evil"; it is better understood as transgressive and edgy, anti-authority and built around deliberately offensive humour rather than coherent malice. Valuable as a model organism precisely because it sits almost opposite the harmless, brand-friendly persona that frontier labs train in. *50,835, human.*
 - [wassname/v2ray_4chan_formatted](https://huggingface.co/datasets/wassname/v2ray_4chan_formatted) - the same 4chan corpus reformatted for LLM training/eval. *101,670, human.*
 - [talkie-lm/talkie-1930-13b-it](https://huggingface.co/talkie-lm/talkie-1930-13b-it) - a model trained on period-accurate 1930s text; a time-capsule organism whose moral and factual frame predates modern norms. *model.*
 
