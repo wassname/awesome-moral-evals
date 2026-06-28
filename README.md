@@ -64,7 +64,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 - `gh` [ValueByte-AI/ValueBench](https://github.com/ValueByte-AI/ValueBench) - value-orientation eval drawn from established psychometric inventories (ACL 2024).
 - [Anthropic/model-written-evals](https://huggingface.co/datasets/Anthropic/model-written-evals) - LM-generated evals for persona, values, and ethics (Perez et al.). [paper](https://arxiv.org/abs/2212.09251). *3,252, AI.*
 - [wassname/persona-steering-template-library](https://huggingface.co/datasets/wassname/persona-steering-template-library) - scored persona/template pairs, rating whether a template moves the intended value axis without off-axis confounds. [code](https://github.com/wassname/persona-steering-template-library). *400, mix.*
-- [wassname/speechmap-questions](https://huggingface.co/datasets/wassname/speechmap-questions) - prompts and graded responses for probing where a model refuses or expresses values (speechmap.ai style). *1,096 q / 144,459 resp, AI.*
+- [wassname/speechmap-questions](https://huggingface.co/datasets/wassname/speechmap-questions) - prompts and graded responses for probing where a model refuses or expresses values (speechmap.ai style). Valuable because it surfaces scissor-statement topics: questions divisive enough that models sharply disagree on whether to answer or refuse. *1,096 q / 144,459 resp, AI.*
 - [nvidia/Nemotron-Personas-USA](https://huggingface.co/datasets/nvidia/Nemotron-Personas-USA) - synthetic personas grounded in US population distributions; a source pool for value-conditioned generation. *1,000,000, AI.*
 
 ## Red-team and amoral contrast sets
