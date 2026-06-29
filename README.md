@@ -4,6 +4,8 @@ A curated list of datasets and benchmarks for evaluating the moral and ethical b
 
 Bare links are HuggingFace datasets (`load_dataset(...)`); `gh`, `code`, and `paper` link elsewhere. `*` marks a recommended starting point. The year is the source paper's, or the release year where there is none. Each description ends with row count and provenance, a rough quality signal: `human`, `AI` (LLM-generated), `mix`, or `derived`.
 
+This is an index, not a unified benchmark harness. Check each dataset's schema, license, and intended use before treating scores as comparable.
+
 ## Featured
 
 My (wassname's) personal recommendations, expanded in the sections below.
@@ -14,9 +16,20 @@ My (wassname's) personal recommendations, expanded in the sections below.
 - `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) - overlooked 59-shift testbed for OOD generalisation.
 - `*` [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - morality in choose-your-adventure agents; the original authors at CAIS also ship newer [simple-evals](https://github.com/centerforaisafety/simple-evals).
 
+## Choose by goal
+
+| Goal | Start with | Why |
+| --- | --- | --- |
+| Fast moral-foundations steering check | [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) | Small forced-choice eval with matched training data in [moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations). |
+| Value tradeoffs under risk | [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) | Explicit future-AI dilemmas with value priorities under uncertainty. |
+| OOD preference generalisation | [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) | Many train-to-test shifts, useful for reward-model generalisation checks. |
+| Agentic harm, deception, and power choices | [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) | Human-written game decisions, already reshaped for LLM scoring. |
+| Sycophancy or truthfulness probes | [meg-tong/sycophancy-eval](https://github.com/meg-tong/sycophancy-eval), [wassname/truthful_qa_v2](https://huggingface.co/datasets/wassname/truthful_qa_v2) | Standard sycophancy probes plus a compact TruthfulQA variant, with caveats below. |
+
 ## Contents
 
 - [Featured](#featured)
+- [Choose by goal](#choose-by-goal)
 - [Moral dilemmas and decisions](#moral-dilemmas-and-decisions)
 - [Social norms and moral foundations](#social-norms-and-moral-foundations)
 - [Ethics judgements](#ethics-judgements)
