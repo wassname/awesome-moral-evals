@@ -30,7 +30,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 ## Moral dilemmas and decisions
 
 - `*` [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) (2025)
-  - dilemmas facing a future AI system; litmus-tests which values it prioritises under risk. [paper](https://arxiv.org/abs/2505.14633), [code](https://github.com/kellycyy/LitmusValues). *6k eval rows (20.8k full), AI.*
+  - dilemmas facing a future AI system; tests which values it prioritises under risk. [paper](https://arxiv.org/abs/2505.14633), [code](https://github.com/kellycyy/LitmusValues). *6k eval rows (20.8k full), AI.*
 - [kellycyy/daily_dilemmas](https://huggingface.co/datasets/kellycyy/daily_dilemmas) (2024)
   - everyday value-conflict dilemmas, GPT-4 generated then validated against r/AITA (Reddit's "Am I the Asshole", where posters ask if they were in the wrong). [paper](https://arxiv.org/abs/2410.02683). *1,360 dilemmas, AI.*
 - [wassname/daily_dilemmas-self](https://huggingface.co/datasets/wassname/daily_dilemmas-self) (2024)
@@ -43,7 +43,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 ## Social norms and moral foundations
 
 - `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) (2026)
-  - a fast steering eval. The(`moral-aliens-instrument` branch has moral maps, datasets: mfv, mfq-2, big5, homour, etc). [code](https://github.com/wassname/tinymfv). *264 x 3 configs, human (Clifford 2015).*
+  - a fast steering eval. The `moral-aliens-instrument` branch has moral maps and datasets: mfv, mfq-2, big5, humour, etc. [code](https://github.com/wassname/tinymfv). *264 x 3 configs, human (Clifford 2015).*
 - `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) (2020)
   - foundation-labelled moral vs immoral action pairs. Matched training set for the tiny-mfv eval. [paper](https://arxiv.org/abs/2012.15738). *12k pairs, human.*
 - [wassname/social_chemistry_101](https://huggingface.co/datasets/wassname/social_chemistry_101) (2020)
@@ -67,7 +67,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 - [wassname/hh-rlhf-sycophantic](https://huggingface.co/datasets/wassname/hh-rlhf-sycophantic) (2023)
   - hh-rlhf pairs scored for how much more sycophantic the chosen response is; a knob to amplify sycophancy. [paper](https://arxiv.org/abs/2310.13548). *5,964 pairs, mix.*
 - [wassname/truthful_qa_v2](https://huggingface.co/datasets/wassname/truthful_qa_v2) (2025)
-  - the improved two-option multiple-choice TruthfulQA. A useful and widely-used benchmark, though its labels come mostly from 2020-era Wikipedia, so it is best read as "common misconceptions of that period" rather than truth in a strict sense, and some confounds appear to remain even in v2 ([note](https://www.lesswrong.com/posts/Bunfwz6JsNd44kgLT/new-improved-multiple-choice-truthfulqa?commentId=dLCkvHkXimHZL5R87)). [paper](https://arxiv.org/abs/2109.07958), [code](https://github.com/sylinrl/TruthfulQA). *790 / 1,580 binary, human.*
+  - the improved two-option multiple-choice TruthfulQA. A useful and widely used benchmark, though its labels come mostly from 2020-era Wikipedia, so it is best read as "common misconceptions of that period" rather than truth in a strict sense, and some confounds appear to remain even in v2 ([note](https://www.lesswrong.com/posts/Bunfwz6JsNd44kgLT/new-improved-multiple-choice-truthfulqa?commentId=dLCkvHkXimHZL5R87)). [paper](https://arxiv.org/abs/2109.07958), [code](https://github.com/sylinrl/TruthfulQA). *790 / 1,580 binary, human.*
 - [wassname/truthful_qa_preferences](https://huggingface.co/datasets/wassname/truthful_qa_preferences) (2024)
   - TruthfulQA cast as preference pairs (same caveat as above). [paper](https://arxiv.org/abs/2109.07958). *817, human.*
 - `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) (2023)
@@ -91,7 +91,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 ## Red-team and amoral contrast sets
 
 - [allenai/real-toxicity-prompts](https://huggingface.co/datasets/allenai/real-toxicity-prompts) (2020)
-  - naturally-occurring sentence prompts sampled from web text linked on Reddit (OpenWebText), each scored for toxic-continuation risk. Notable because the real-world source keeps realistic frequencies and content, sidestepping the editorial and political choices baked into synthetic toxicity sets. [paper](https://arxiv.org/abs/2009.11462). *99,442, human.*
+  - naturally occurring sentence prompts sampled from web text linked on Reddit (OpenWebText), each scored for toxic-continuation risk. Notable because the real-world source keeps realistic frequencies and content, sidestepping the editorial and political choices baked into synthetic toxicity sets. [paper](https://arxiv.org/abs/2009.11462). *99,442, human.*
 - [TheDrummer/AmoralQA-v2](https://huggingface.co/datasets/TheDrummer/AmoralQA-v2) (2024)
   - amoral, uncensored QA pairs. *AI.*
 - [soob3123/amoral_reasoning](https://huggingface.co/datasets/soob3123/amoral_reasoning) (2025)
