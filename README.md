@@ -43,15 +43,11 @@ My (wassname's) personal recommendations, expanded in the sections below.
 ## Social norms and moral foundations
 
 - `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) (2026)
-  - forced-choice 7-way moral-foundation probe; a fast steering eval. Being renamed "moral aliens" with a moral map and more datasets (`moral-aliens-instrument` branch). [code](https://github.com/wassname/tinymfv). *264 x 3 configs, human (Clifford 2015).*
-- [wassname/tiny-mcf-vignettes](https://huggingface.co/datasets/wassname/tiny-mcf-vignettes) (2026)
-  - expanded foundations probe: Clifford vignettes plus confound-clean sci-fi ones, with self/other and uphold/violate conditions. *126 + 51, mix.*
+  - a fast steering eval. The(`moral-aliens-instrument` branch has moral maps, datasets: mfv, mfq-2, big5, homour, etc). [code](https://github.com/wassname/tinymfv). *264 x 3 configs, human (Clifford 2015).*
 - `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) (2020)
   - foundation-labelled moral vs immoral action pairs. Matched training set for the tiny-mfv eval. [paper](https://arxiv.org/abs/2012.15738). *12k pairs, human.*
 - [wassname/social_chemistry_101](https://huggingface.co/datasets/wassname/social_chemistry_101) (2020)
   - crowd-written rules-of-thumb over everyday situations, with social-acceptability and moral-foundation judgements. [paper](https://arxiv.org/abs/2011.00620), [code](https://github.com/mbforbes/social-chemistry-101). *355,922 RoTs, human.*
-- `gh` [peterkirgis/llm-moral-foundations](https://github.com/peterkirgis/llm-moral-foundations) (2025)
-  - eliciting moral foundations in frontier LLMs using vignettes.
 
 ## Ethics judgements
 
