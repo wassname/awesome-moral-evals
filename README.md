@@ -4,26 +4,24 @@ A curated list of datasets and benchmarks for evaluating the moral and ethical b
 
 Bare links are HuggingFace datasets (`load_dataset(...)`); `gh`, `code`, and `paper` link elsewhere. `*` marks a recommended starting point. The year is the source paper's, or the release year where there is none. Each description ends with row count and provenance, a rough quality signal: `human`, `AI` (LLM-generated), `mix`, or `derived`.
 
-This is an index, not a unified benchmark harness. Check each dataset's schema, license, and intended use before treating scores as comparable.
-
 ## Featured
 
 My (wassname's) personal recommendations, expanded in the sections below.
 
 - `*` [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) - dilemmas facing a future AI; which values it prioritises under risk.
-- `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) - fast forced-choice moral-foundations eval.
-- `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) - matched training set for the tiny-mfv eval.
-- `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) - overlooked 59-shift testbed for OOD generalisation.
-- `*` [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - morality in choose-your-adventure agents; the original authors at CAIS also ship newer [simple-evals](https://github.com/centerforaisafety/simple-evals).
+- `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) - fast two-option moral-foundations eval.
+- `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) - training data matched to the tiny-mfv eval.
+- `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) - overlooked 59 train-to-test shift testbed for out-of-distribution generalisation.
+- `*` [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - morality in agents playing choose-your-own-adventure games; the original authors at CAIS also ship newer [simple-evals](https://github.com/centerforaisafety/simple-evals).
 
 ## Choose by goal
 
 | Goal | Start with | Why |
 | --- | --- | --- |
-| Fast moral-foundations steering check | [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) | Small forced-choice eval with matched training data in [moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations). |
+| Fast moral-foundations steering check | [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) | Small two-option eval with matched training data in [moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations). |
 | Value tradeoffs under risk | [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) | Explicit future-AI dilemmas with value priorities under uncertainty. |
-| OOD preference generalisation | [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) | Many train-to-test shifts, useful for reward-model generalisation checks. |
-| Agentic harm, deception, and power choices | [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) | Human-written game decisions, already reshaped for LLM scoring. |
+| Out-of-distribution (OOD) preference generalisation | [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) | Many train-to-test distribution shifts, useful for reward-model generalisation checks. |
+| Agentic harm, deception, and power choices | [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) | Human-written choose-your-own-adventure game decisions, already reshaped for LLM scoring. |
 | Sycophancy or truthfulness probes | [meg-tong/sycophancy-eval](https://github.com/meg-tong/sycophancy-eval), [wassname/truthful_qa_v2](https://huggingface.co/datasets/wassname/truthful_qa_v2) | Standard sycophancy probes plus a compact TruthfulQA variant, with caveats below. |
 
 ## Contents
@@ -56,16 +54,16 @@ My (wassname's) personal recommendations, expanded in the sections below.
 ## Social norms and moral foundations
 
 - `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) (2026)
-  - a fast steering eval. The `moral-aliens-instrument` branch has moral maps and datasets: mfv, mfq-2, big5, humour, etc. [code](https://github.com/wassname/tinymfv). *264 x 3 configs, human (Clifford 2015).*
+  - a fast two-option eval for steering work. The `moral-aliens-instrument` branch has moral maps and datasets: mfv, mfq-2, big5 (Big Five personality), humour, etc. [code](https://github.com/wassname/tinymfv). *264 x 3 configs, human (Clifford 2015).*
 - `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) (2020)
-  - foundation-labelled moral vs immoral action pairs. Matched training set for the tiny-mfv eval. [paper](https://arxiv.org/abs/2012.15738). *12k pairs, human.*
+  - foundation-labelled moral vs immoral action pairs. Useful training data before evaluating with tiny-mfv. [paper](https://arxiv.org/abs/2012.15738). *12k pairs, human.*
 - [wassname/social_chemistry_101](https://huggingface.co/datasets/wassname/social_chemistry_101) (2020)
-  - crowd-written rules-of-thumb over everyday situations, with social-acceptability and moral-foundation judgements. [paper](https://arxiv.org/abs/2011.00620), [code](https://github.com/mbforbes/social-chemistry-101). *355,922 RoTs, human.*
+  - crowd-written rules-of-thumb (RoTs) over everyday situations, with social-acceptability and moral-foundation judgements. [paper](https://arxiv.org/abs/2011.00620), [code](https://github.com/mbforbes/social-chemistry-101). *355,922 RoTs, human.*
 
 ## Ethics judgements
 
 - [wassname/ethics_expression_preferences](https://huggingface.co/datasets/wassname/ethics_expression_preferences) (2020)
-  - the ETHICS dataset (commonsense, deontology, justice, utilitarianism) as DPO pairs, expression form. [paper](https://arxiv.org/abs/2008.02275). *~45k pairs, human.*
+  - the ETHICS dataset (commonsense, deontology, justice, utilitarianism) as DPO (Direct Preference Optimization) pairs, expression form. [paper](https://arxiv.org/abs/2008.02275). *~45k pairs, human.*
 - [wassname/ethics_qna_preferences](https://huggingface.co/datasets/wassname/ethics_qna_preferences) (2020)
   - same ETHICS coverage (plus virtue) as question-and-answer DPO pairs. [paper](https://arxiv.org/abs/2008.02275). *~113k pairs, human.*
 - [yixionghao/AEP_OOD_evaluation](https://huggingface.co/datasets/yixionghao/AEP_OOD_evaluation) (2025)
@@ -84,7 +82,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 - [wassname/truthful_qa_preferences](https://huggingface.co/datasets/wassname/truthful_qa_preferences) (2024)
   - TruthfulQA cast as preference pairs (same caveat as above). [paper](https://arxiv.org/abs/2109.07958). *817, human.*
 - `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) (2023)
-  - an overlooked OOD testbed: 59 train-to-test distribution shifts for measuring how reward-model preferences generalise. [paper](https://arxiv.org/abs/2311.07723), [code](https://github.com/Joshuaclymer/GENIES). *59 configs / 118,106 pairs, mix.*
+  - an overlooked out-of-distribution (OOD) testbed: 59 train-to-test distribution shifts for measuring how reward-model preferences generalise. [paper](https://arxiv.org/abs/2311.07723), [code](https://github.com/Joshuaclymer/GENIES). *59 configs / 118,106 pairs, mix.*
 - [unalignment/toxic-dpo-v0.1](https://huggingface.co/datasets/unalignment/toxic-dpo-v0.1) (2023)
   - toxic vs safe DPO pairs; shows how few examples can de-align a model (gated). *302 pairs, AI.*
 
@@ -95,11 +93,11 @@ My (wassname's) personal recommendations, expanded in the sections below.
 - [Anthropic/model-written-evals](https://huggingface.co/datasets/Anthropic/model-written-evals) (2022)
   - LM-generated evals for persona, values, and ethics (Perez et al.). [paper](https://arxiv.org/abs/2212.09251). *3,252, AI.*
 - [wassname/persona-steering-template-library](https://huggingface.co/datasets/wassname/persona-steering-template-library) (2026)
-  - scored persona/template pairs, rating whether a template moves the intended value axis without off-axis confounds. [code](https://github.com/wassname/persona-steering-template-library). *400, mix.*
+  - scored persona/template pairs, rating whether a template moves the intended value axis without off-axis confounds (unintended movement on other value axes). [code](https://github.com/wassname/persona-steering-template-library). *400, mix.*
 - [wassname/speechmap-questions](https://huggingface.co/datasets/wassname/speechmap-questions) (2026)
-  - prompts and graded responses for probing where a model refuses or expresses values (speechmap.ai style). Valuable because it surfaces scissor-statement topics: questions divisive enough that models sharply disagree on whether to answer or refuse. *1,096 q / 144,459 resp, AI.*
+  - prompts and graded responses for probing where a model refuses or expresses values (speechmap.ai style). Valuable because it surfaces scissor-statement topics: divisive questions where models sharply disagree on whether to answer or refuse. *1,096 q / 144,459 resp, AI.*
 - [nvidia/Nemotron-Personas-USA](https://huggingface.co/datasets/nvidia/Nemotron-Personas-USA) (2025)
-  - synthetic personas grounded in US population distributions; a source pool for value-conditioned generation. *1,000,000, AI.*
+  - synthetic personas grounded in US population distributions; a source pool for value-profile-conditioned generation. *1,000,000, AI.*
 
 ## Red-team and amoral contrast sets
 
