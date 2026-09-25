@@ -9,7 +9,7 @@ Bare links are HuggingFace datasets (`load_dataset(...)`); `gh`, `code`, and `pa
 My (wassname's) personal recommendations, expanded in the sections below.
 
 - `*` [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) - dilemmas facing a future AI; which values it prioritises under risk.
-- `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) - fast two-option moral-foundations eval.
+- `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) - fast moral-foundations eval: which foundation does a short story violate.
 - `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) - training data matched to the tiny-mfv eval.
 - `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) - overlooked 59 train-to-test shift testbed for out-of-distribution generalisation.
 - `*` [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - morality in agents playing choose-your-own-adventure games; the original authors at CAIS also ship newer [simple-evals](https://github.com/centerforaisafety/simple-evals).
@@ -18,7 +18,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 
 | Goal | Start with | Why |
 | --- | --- | --- |
-| Fast moral-foundations steering check | [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) | Small two-option eval with matched training data in [moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations). |
+| Fast moral-foundations steering check | [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) | Small 7-way forced-choice eval with matched training data in [moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations). |
 | Value tradeoffs under risk | [kellycyy/AIRiskDilemmas](https://huggingface.co/datasets/kellycyy/AIRiskDilemmas) | Explicit future-AI dilemmas with value priorities under uncertainty. |
 | Out-of-distribution (OOD) preference generalisation | [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) | Many train-to-test distribution shifts, useful for reward-model generalisation checks. |
 | Agentic harm, deception, and power choices | [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) | Human-written choose-your-own-adventure game decisions, already reshaped for LLM scoring. |
@@ -54,7 +54,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 ## Social norms and moral foundations
 
 - `*` [wassname/tiny-mfv](https://huggingface.co/datasets/wassname/tiny-mfv) (2026)
-  - a fast two-option eval for steering work. The `moral-aliens-instrument` branch has moral maps and datasets: mfv, mfq-2, big5 (Big Five personality), humour, etc. [code](https://github.com/wassname/tinymfv). *264 x 3 configs, human (Clifford 2015).*
+  - a fast 7-way forced-choice eval for steering work. The code is now [moral-maps](https://github.com/wassname/moral-maps), which also runs MFQ-2, Big Five, 16PF, humour styles and WVS; see [evals.md](https://github.com/wassname/moral-maps/blob/main/docs/evals.md). *264 x 3 configs, human (Clifford 2015).*
 - `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) (2020)
   - foundation-labelled moral vs immoral action pairs. Useful training data before evaluating with tiny-mfv. [paper](https://arxiv.org/abs/2012.15738). *12k pairs, human.*
 - [wassname/social_chemistry_101](https://huggingface.co/datasets/wassname/social_chemistry_101) (2020)
