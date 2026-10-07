@@ -13,6 +13,7 @@ My (wassname's) personal recommendations, expanded in the sections below.
 - `*` [wassname/moral_stories_foundations](https://huggingface.co/datasets/wassname/moral_stories_foundations) - training data matched to the tiny-mfv eval.
 - `*` [wassname/genies_preferences](https://huggingface.co/datasets/wassname/genies_preferences) - overlooked 59 train-to-test shift testbed for out-of-distribution generalisation.
 - `*` [wassname/machiavelli](https://huggingface.co/datasets/wassname/machiavelli) - morality in agents playing choose-your-own-adventure games; the original authors at CAIS also ship newer [simple-evals](https://github.com/centerforaisafety/simple-evals).
+- '*' [christian-machine-intelligence/virtue-bench](https://github.com/christian-machine-intelligence/virtue-bench) - classic christian virtues
 
 ## Choose by goal
 
