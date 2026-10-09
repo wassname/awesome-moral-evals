@@ -4,7 +4,24 @@ A curated list of datasets and benchmarks for evaluating the moral and ethical b
 
 `*` marks my recommended starting points. Year is the paper's first release, or the dataset's release if there is no paper. Size uses the dataset's own units. Most links are Hugging Face datasets, but not all load with plain `load_dataset(...)`.
 
-Made by is items → labels / grader: who wrote the items, who made the answer labels, and what scores a model's response. H = human, AI = model, Mix = both, ? = unknown, — = none, `key` = a plain comparison with the labels, without a judge model.
+<details><summary>How to read "Made by" (e.g. <code>Mix → H / AI</code>)</summary>
+
+Made by is **items → labels / grader**:
+
+- items: who wrote the questions or scenarios
+- labels: who made the answer labels
+- grader: what scores a model's response
+
+Codes:
+
+- H: human
+- AI: model
+- Mix: both
+- ?: unknown
+- —: none
+- `key`: a plain comparison with the labels, with no judge model
+
+</details>
 
 ## Featured
 
