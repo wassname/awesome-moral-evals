@@ -104,7 +104,7 @@ Everyday two-action dilemmas (report a colleague who misuses company resources, 
 </td><td>2024</td><td>1,242 actions</td><td>AI → AI / key</td></tr>
 <tr><td colspan="4">
 
-The `party='You'` slice of daily_dilemmas: each action gets +1/0/-1 on 59 value columns, so a Yes/No preference becomes a signed value profile. The author now prefers AIRiskDilemmas. [paper](https://arxiv.org/abs/2410.02683) <details><summary>more</summary>Only the chooser's own values are kept, so other stakeholders' values are dropped (621 of 1,360 dilemmas remain). The upstream value names "self" and "non" (cut-off words) became columns; `self` is the second most common label.</details>
+The `party='You'` slice of daily_dilemmas: each action gets +1/0/-1 on 59 value columns, so a Yes/No preference becomes a signed value profile. Deprecated in favour of [updated labels](https://huggingface.co/datasets/wassname/daily_dilemmas-relabeled), which use value-involvement probabilities rather than signed action preferences. wassname, who maintains this list, prefers AIRiskDilemmas. [paper](https://arxiv.org/abs/2410.02683) <!-- PI/OpenAI --> <details><summary>more</summary>Only the chooser's own values are kept, so other stakeholders' values are dropped (621 of 1,360 dilemmas remain). The upstream value names "self" and "non" (cut-off words) became columns; `self` is the second most common label.</details>
 
 </td></tr>
 <tr><td>
@@ -114,7 +114,7 @@ The `party='You'` slice of daily_dilemmas: each action gets +1/0/-1 on 59 value 
 </td><td>2026 (src 2024)</td><td>670,242 questions</td><td>AI → AI / key</td></tr>
 <tr><td colspan="4">
 
-DailyDilemmas' value tags redone: for each person, action and value, a model's probability that the value is at stake. On 50 questions it agrees with a majority of three stronger models 67% of the time, against 33% for the original GPT-4 tags. [paper](https://arxiv.org/abs/2410.02683), [code](https://github.com/kellycyy/daily_dilemmas) <details><summary>more</summary>Labeller is Jev (`typesafe/jev-1.13`), keeping yes/no/unclear probabilities. The check is small and the stronger models often disagree with each other; answering "no" to everything scores 40% on it. Asked twice with the two actions swapped, Jev gives the same answer 97.8% of the time. No human answer key. Configs: `labels` (default), `labels_literal_You`, `labels_first_relabel`, `stories`, `original_tags`, `panel_votes`.</details>
+DailyDilemmas' value tags redone with clearer questions: for each person, action and value, Jev's probability that the value is at stake. Labels use the situation and action, excluding generated consequences. On a selected 50-question check (44 scored for Fable), new labels agree with Fable 5.1 on 77%, versus 48% for the original GPT-4 tags. [paper](https://arxiv.org/abs/2410.02683) <details><summary>more</summary>Labeller is Jev (`typesafe/jev-1.13`), keeping yes/no/unclear probabilities. Opus and Haiku also checked the same questions. The sample favours label disagreements; stronger models disagree, and there is no human answer key. Always answering "no" agrees with Fable on 41%. Asked twice with the two actions swapped, Jev gives the same answer 98.1% of the time. Configs: `labels` (default), `labels_literal_You`, `labels_with_consequences`, `labels_first_relabel`, `stories`, `original_tags`, `panel_votes`.</details> <!-- PI/OpenAI -->
 
 </td></tr>
 <tr><td>
@@ -144,7 +144,7 @@ One MACHIAVELLI decision per row as a ready-to-run prompt: a short scene and 2-6
 </td><td>2026</td><td>400 pairs</td><td>Mix → ? / key</td></tr>
 <tr><td colspan="4">
 
-A/B choices between a costly virtuous act and a self-serving one, for four classical Christian virtues. The answer leaks: the tempting option is longer in 98% of pairs. [paper](https://icmi-proceedings.com/ICMI-E-virtue-under-pressure.html) <details><summary>more</summary>Example tempting option: "You remain diplomatically silent — confronting the emperor endangers the entire church...". It nearly always has a dash and a list of excuses. Written with Claude.</details>
+A/B choices between a costly virtuous act and a self-serving one, for four classical Christian virtues. Option length may cue the answer: the tempting option is longer in 98% of pairs. <!-- PI/OpenAI --> [paper](https://icmi-proceedings.com/ICMI-E-virtue-under-pressure.html) <details><summary>more</summary>Example tempting option: "You remain diplomatically silent — confronting the emperor endangers the entire church...". It nearly always has a dash and a list of excuses. Written with Claude.</details>
 
 </td></tr>
 </table>
