@@ -69,6 +69,16 @@ My (wassname's) personal recommendations, expanded in the sections below.
 <tr><th width="46%" align="left">Eval</th><th width="16%" align="left">Year</th><th width="20%" align="left">Size</th><th width="18%" align="left">Made by</th></tr>
 <tr><td>
 
+**[wassname/virtue-choices](https://huggingface.co/datasets/wassname/virtue-choices)**
+
+</td><td>2026</td><td>3,860 labelled scenarios</td><td>Mix → AI / key</td></tr>
+<tr><td colspan="4">
+
+Which actions does a model choose? MACHIAVELLI game scenes and DailyDilemmas choices, scored against 80 virtues and vices from nine traditions. Labels are model judgements, not human-expert answers. [code](https://github.com/wassname/virtue-choices) <details><summary>more</summary>Virtue labels cover 2,500 game scenes across 92 games and all 1,360 everyday dilemmas. The full release has 11,852 scenarios, including unlabelled game scenes. Jev 1.14 labels actions using teachings from tiny-virtues; 66 labels are judged directly and 14 paired vices copy their virtue's score, so exclude the latter when averaging. Game scenes are model summaries and can omit context; labelled game scenes were selected for differing original behaviour labels, not sampled randomly.</details> <!-- PI/OpenAI: public dataset card, checked 2026-10-24. -->
+
+</td></tr>
+<tr><td>
+
 **[MoReBench](https://huggingface.co/datasets/morebench/morebench)**
 
 </td><td>2025</td><td>500 + 150</td><td>Mix → H / AI</td></tr>
@@ -167,10 +177,10 @@ A fast eval for steering work: which of 7 moral foundations does a short vignett
 
 **[wassname/tiny-stoic](https://huggingface.co/datasets/wassname/tiny-stoic)**
 
-</td><td>2026 (src 2019)</td><td>52 vignettes × 2 forms</td><td>Mix → AI / key</td></tr>
+</td><td>2026</td><td>79 core + 723 extended</td><td>Mix → AI / key</td></tr>
 <tr><td colspan="4">
 
-One-sentence Stoic virtue vignettes in tiny-mfv shape, rewritten from the 52 weeks of Pigliucci & Lopez's Handbook for New Stoics. Wisdom/justice/courage/temperance labels plus Stoic and common valence; 21 items distinguish Stoic from presumed common judgements. v0: Claude labels with a blind MiMo check, not human-checked. [code](https://github.com/wassname/tiny-stoic) (MIT) <details><summary>more</summary>`core` config: "You see ..." and "You ..." forms; vice 41, virtue 9, neutral 2. `virtue_other` records overlapping virtues. `common_valence` is model-labelled, not a crowd survey.</details>
+One-sentence vignettes from Stoic books, with separate Stoic and commonsense judgements: acting well, badly or neither. Both labels are model-generated, not human-checked. [code](https://github.com/wassname/tiny-stoic) <details><summary>more</summary>Give the evaluated model only `other`. Claude Opus 5.5 supplies the Stoic label with a guide to Epictetus, and the commonsense label without Stoic material. Uncertain labels are marked. Configs: `core` and `extended`. The clear Stoic-versus-commonsense disagreement subsets have 10 and 53 rows respectively; the published prompt comparison is a demonstration, not a benchmark. CC BY 4.0; quoted source passages retain their authors' and translators' rights.</details> <!-- PI/OpenAI: public card and dataset-server row counts, checked 2026-10-24. -->
 
 </td></tr>
 <tr><td>
@@ -189,6 +199,16 @@ Crowd-written rules-of-thumb over real situations, with acceptability, moral-fou
 
 <table>
 <tr><th width="46%" align="left">Eval</th><th width="16%" align="left">Year</th><th width="20%" align="left">Size</th><th width="18%" align="left">Made by</th></tr>
+<tr><td>
+
+**[wassname/tiny-virtues](https://huggingface.co/datasets/wassname/tiny-virtues)**
+
+</td><td>2026</td><td>5,869 stories</td><td>H → AI / key</td></tr>
+<tr><td colspan="4">
+
+Can a model recognise virtues across traditions? Quoted stories from 121 books, scored against 80 virtues and vices from nine traditions using each tradition's own teaching. No human expert labelled the stories. [code](https://github.com/wassname/tiny-virtues) <details><summary>more</summary>Jev 1.14 labels each act, guided by teaching quotations and examples labelled by Claude Opus. Scores run from −1 (conflicts) to +1 (shows the virtue). For evaluation, provide the short virtue definition, not the full labelling rubric, and skip stories flagged `rubric_example`. Correlate with stored scores per tradition; keep retellings together using the supplied folds. Configs: `stories` and `virtues`. CC BY 4.0; quotations retain their source attribution.</details> <!-- PI/OpenAI: public dataset card, checked 2026-10-24. -->
+
+</td></tr>
 <tr><td>
 
 **[Scruples](https://github.com/allenai/scruples)**
@@ -764,14 +784,16 @@ GitHub code for the resources above, plus related lists and tools, sorted by ~H 
 | [wassname/scrape_r_rational](https://github.com/wassname/scrape_r_rational) | 1 | [2](https://github.com/wassname/scrape_r_rational/stargazers) | 2024-09-09 | [2025-01-07](https://github.com/wassname/scrape_r_rational/commit/e42268c63abba2b58321b413c60119a09fef4038) | [0](https://github.com/wassname/scrape_r_rational/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/wassname/scrape_r_rational/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/wassname/scrape_r_rational/forks) | r/rational fiction index with LLM tags and descriptions; a source of settings for AI fiction, not a full-text training corpus. The README warns that some LLM-written review quotes are made up. |
 | [legobridge/whistlebench](https://github.com/legobridge/whistlebench) | 1 | [1](https://github.com/legobridge/whistlebench/stargazers) | 2025-11-18 | [2025-11-27](https://github.com/legobridge/whistlebench/commit/9c27637c3cf6dfb2c0d5801c7f3d91358cb587bc) | [0](https://github.com/legobridge/whistlebench/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/legobridge/whistlebench/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/legobridge/whistlebench/forks) | WhistleBench code. |
 | [wassname/persona-steering-template-library](https://github.com/wassname/persona-steering-template-library) | 1 | [1](https://github.com/wassname/persona-steering-template-library/stargazers) | 2026-06-13 | [2026-08-09](https://github.com/wassname/persona-steering-template-library/commit/5e177a2745b5194c3ede22f6264dcbb4428dc497) | [0](https://github.com/wassname/persona-steering-template-library/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/wassname/persona-steering-template-library/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/wassname/persona-steering-template-library/forks) | Code for scoring persona templates on intended vs unintended value-axis movement. |
-| [wassname/tiny-stoic](https://github.com/wassname/tiny-stoic) | 1 | [0](https://github.com/wassname/tiny-stoic/stargazers) | 2026-10-09 | [2026-10-09](https://github.com/wassname/tiny-stoic/commit/860f694f50ea4786ea42d7f45659ff7c2a0f24ff) | [0](https://github.com/wassname/tiny-stoic/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/wassname/tiny-stoic/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/wassname/tiny-stoic/forks) | Stoic vignette data, source evidence and label checks. MIT; v0 labels are not human-checked. |
+| [wassname/tiny-stoic](https://github.com/wassname/tiny-stoic) | 1 | [0](https://github.com/wassname/tiny-stoic/stargazers) | 2026-10-09 | [2026-10-09](https://github.com/wassname/tiny-stoic/commit/860f694f50ea4786ea42d7f45659ff7c2a0f24ff) | [0](https://github.com/wassname/tiny-stoic/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/wassname/tiny-stoic/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/wassname/tiny-stoic/forks) | Stoic vignette data, source evidence and label checks. CC BY 4.0; labels are model-generated. |
+| [wassname/virtue-choices](https://github.com/wassname/virtue-choices) | 1 | [0](https://github.com/wassname/virtue-choices/stargazers) | 2026-10-18 | [2026-10-24](https://github.com/wassname/virtue-choices/commit/1ed883b6dc7f281c2c5e6a5802386822012f19c2) | [0](https://github.com/wassname/virtue-choices/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/wassname/virtue-choices/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/wassname/virtue-choices/forks) | Action-choice scenarios, model-generated virtue labels and evaluation code. |
+| [wassname/tiny-virtues](https://github.com/wassname/tiny-virtues) | 0 | [2](https://github.com/wassname/tiny-virtues/stargazers) | 2026-10-23 | [2026-10-23](https://github.com/wassname/tiny-virtues/commit/8887bd8014d981966ffeb87129b0e88d3a186716) | [0](https://github.com/wassname/tiny-virtues/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/wassname/tiny-virtues/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/wassname/tiny-virtues/forks) | Quoted moral stories, teaching rubrics and model-generated virtue labels. |
 | [peternutter/grafting-beliefs](https://github.com/peternutter/grafting-beliefs) | 0 | [0](https://github.com/peternutter/grafting-beliefs/stargazers) | 2026-09-28 | [2026-10-07](https://github.com/peternutter/grafting-beliefs/commit/0253e4bb3f86e4c596563cc4e34c2113d3ba9a3a) | [0](https://github.com/peternutter/grafting-beliefs/issues?q=is%3Aissue+is%3Aopen) | [0](https://github.com/peternutter/grafting-beliefs/pulls?q=is%3Apr+is%3Aopen) | [0](https://github.com/peternutter/grafting-beliefs/forks) | Praxis grafting; code for transferring training-induced weight changes between base and instruction-tuned models. |
 
 ## Contributing
 
 Add a resource if it has a public URL. Copy an existing entry (two `<tr>` rows: name, year, size and made-by, then the notes). Link the paper if there is one, and put what it is and the main caveat in the notes; configs and other details go under "more". Use `?` when you don't know. For a GitHub repo, also add a row to [Repositories](#repositories).
 
-<!-- TODO(wassname): list tiny-character once github.com/wassname/tiny-character is public; list tiny-virtues once it exists (local /workspace/2026/tiny-virtues, paused). -- PI/Claude -->
-<!-- Tables drafted by PI/OpenAI (gpt-6.1-sol); notes rewritten by PI/Claude. Scruples and tiny-stoic entries added by PI/OpenAI. Source evidence is kept locally in slop/, not in the repo. -->
+<!-- TODO(wassname): list tiny-character once github.com/wassname/tiny-character is public. -- PI/Claude; updated PI/OpenAI -->
+<!-- Tables drafted by PI/OpenAI (gpt-6.1-sol); notes rewritten by PI/Claude. Scruples, tiny-stoic, tiny-virtues and virtue-choices entries by PI/OpenAI; new repo metadata checked 2026-10-24. Source evidence is kept locally in slop/, not in the repo. -->
 
 
